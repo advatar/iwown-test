@@ -256,6 +256,9 @@ public class IWownManager: NSObject, DeviceManager, WatchDelegate {
             points.append(CGPoint(x:0,y:0))
             points.append(CGPoint(x:2000,y:2000))
             
+            print("RRI")
+        
+            print(points)
 
         } else if sdType == PBSDType_dt_ecg.rawValue {
             var points = [CGPoint]()
@@ -273,11 +276,7 @@ public class IWownManager: NSObject, DeviceManager, WatchDelegate {
                     }
                 }
             }
-            // FIXME
-            //DispatchQueue.main.async {
-             //     self.taskManager.save(points: points, date: date , taskIdentifier: "ecg", allowDuplicates: true)
-            //  }
-
+            print(points)
 
         } else if sdType == PBSDType_dt_health.rawValue {
 
@@ -306,6 +305,10 @@ public class IWownManager: NSObject, DeviceManager, WatchDelegate {
 
                 }
             }
+            
+            print("BPM")
+            
+            print(points)
 
         }
 
