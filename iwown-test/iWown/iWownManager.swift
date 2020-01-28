@@ -306,6 +306,8 @@ public class IWownManager: NSObject, DeviceManager, WatchDelegate {
                 }
             }
             
+            processSleep(date: info.date, json: jsonArr)
+            
             print("BPM")
             
             print(points)
@@ -316,6 +318,78 @@ public class IWownManager: NSObject, DeviceManager, WatchDelegate {
 
     }
 
+    
+    func processSleep(date: Date, json: [JSON]) {
+        // Sleep Quality
+
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYYMMdd"
+            let dateStr = dateFormatter.string(from: date)
+            let uid = UInt64.random(in: UInt64.min...UInt64.max)
+            let deviceName = "ECG"
+
+            let documentsDir = FileManager.documentDir
+            let sleepDir = documentsDir.appendingPathComponent("Sleep/"+dateStr)
+
+            if let fileURL = createSleepFile(sleepDir: sleepDir, dateStr: dateStr, uid: uid, source: deviceName) {
+
+                //log.info(fileURL)
+
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: json, options: [])
+
+                    if let jsonStr = String(data: jsonData, encoding: .utf8) {
+                        //log.info(fileURL.path)
+                        //log.info(jsonStr)
+                        try jsonStr.write(to: fileURL, atomically: true, encoding: .utf8)
+                        
+                        let sleepProcessor = IVSleep()
+                        var error:NSError?
+                        //let sleepData
+                        _ = sleepProcessor.ivSleepData(sleepDir.path, andUid: uid, andDate: dateStr, andDeviceName: deviceName, andError: &error)
+
+                        if let error = error {
+                            print(error.localizedDescription)
+                        }/* else {
+                            log.info(sleepData)
+                        }*/
+
+                        try? FileManager.default.removeItem(atPath: fileURL.path)
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            } else {
+                print("Could not create temporary sleep data file")
+            }
+    }
+    
+    func createSleepFile(sleepDir: URL, dateStr: String, uid: UInt64, source: String) -> URL? {
+        let fileName = "uid-"+String(describing:uid)+"-date-"+dateStr+"-source-"+source+".json"
+        let sleepFile = sleepDir.appendingPathComponent(fileName)
+
+        if !FileManager.default.fileExists(atPath: sleepDir.path) {
+            do {
+                let attributes : [FileAttributeKey: Any] = [:]
+                try FileManager.default.createDirectory(at: sleepDir, withIntermediateDirectories: true, attributes: attributes)
+            } catch {
+                print(error.localizedDescription)
+                return nil
+            }
+        }
+
+        if !FileManager.default.fileExists(atPath: sleepFile.path) {
+            let attributes : [FileAttributeKey: Any] = [:] //[FileAttributeKey.protectionKey: FileProtectionType.none]
+            let success = FileManager.default.createFile(atPath: sleepFile.path, contents: nil, attributes: attributes)
+            if !success {
+                print("FileManager.default.createFile \(sleepFile.path) with attributes \(attributes)")
+                return nil
+            }
+        }
+
+        return sleepFile
+    }
+    
     func nextType()  {
         ble.solstice?.pbFileUpdateInit([:])
         ble.solstice?.startFileUpdate()

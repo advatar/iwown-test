@@ -19,6 +19,8 @@
 		0C462B2223E0249000FF5376 /* iWownTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C462B2123E0249000FF5376 /* iWownTypes.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0C462B2623E026DD00FF5376 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C462B2523E026DD00FF5376 /* Misc.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0C462B2823E0421D00FF5376 /* dragonBoat.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C462B1E23E0248B00FF5376 /* dragonBoat.plist */; };
+		0C462B3223E0A47600FF5376 /* IVSleep.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C462B2C23E0A3DA00FF5376 /* IVSleep.a */; };
+		0C462B3523E0A4B700FF5376 /* dummy2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C462B3323E0A4B700FF5376 /* dummy2.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,11 @@
 		0C462B1F23E0248E00FF5376 /* iWownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iWownManager.swift; path = iWown/iWownManager.swift; sourceTree = "<group>"; };
 		0C462B2123E0249000FF5376 /* iWownTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iWownTypes.swift; path = iWown/iWownTypes.swift; sourceTree = "<group>"; };
 		0C462B2523E026DD00FF5376 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		0C462B2C23E0A3DA00FF5376 /* IVSleep.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = IVSleep.a; path = "iwown-test/iWown/IVSleep.a"; sourceTree = "<group>"; };
+		0C462B2D23E0A3F600FF5376 /* iwown-test-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iwown-test-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C462B3123E0A41500FF5376 /* IVSleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IVSleep.h; path = iWown/IVSleep.h; sourceTree = "<group>"; };
+		0C462B3323E0A4B700FF5376 /* dummy2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dummy2.cpp; sourceTree = "<group>"; };
+		0C462B3423E0A4B700FF5376 /* dummy2.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dummy2.hpp; sourceTree = "<group>"; };
 		6CD493FCD107A368ED7C1187 /* Pods_iwown_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwown_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7EE1383488B05EE4A002E0 /* Pods-iwown-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwown-test.release.xcconfig"; path = "Target Support Files/Pods-iwown-test/Pods-iwown-test.release.xcconfig"; sourceTree = "<group>"; };
 		AFD67050FBAAC8F1E98DB04C /* Pods-iwown-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwown-test.debug.xcconfig"; path = "Target Support Files/Pods-iwown-test/Pods-iwown-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C462B3223E0A47600FF5376 /* IVSleep.a in Frameworks */,
 				0645BD46BE54AEBF5F208D96 /* Pods_iwown_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +90,9 @@
 		0C462B0123E01D0700FF5376 /* iwown-test */ = {
 			isa = PBXGroup;
 			children = (
+				0C462B3123E0A41500FF5376 /* IVSleep.h */,
+				0C462B3323E0A4B700FF5376 /* dummy2.cpp */,
+				0C462B3423E0A4B700FF5376 /* dummy2.hpp */,
 				0C462B0223E01D0700FF5376 /* AppDelegate.swift */,
 				0C462B0B23E01D0A00FF5376 /* Assets.xcassets */,
 				0C462B1C23E0248600FF5376 /* BLEControllers.swift */,
@@ -94,6 +105,7 @@
 				0C462B2523E026DD00FF5376 /* Misc.swift */,
 				0C462B0623E01D0700FF5376 /* ScanViewController.swift */,
 				0C462B0423E01D0700FF5376 /* SceneDelegate.swift */,
+				0C462B2D23E0A3F600FF5376 /* iwown-test-Bridging-Header.h */,
 			);
 			path = "iwown-test";
 			sourceTree = "<group>";
@@ -101,6 +113,7 @@
 		2DD5B9B6DD7C3129812AE757 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C462B2C23E0A3DA00FF5376 /* IVSleep.a */,
 				6CD493FCD107A368ED7C1187 /* Pods_iwown_test.framework */,
 			);
 			name = Frameworks;
@@ -140,6 +153,7 @@
 				TargetAttributes = {
 					0C462AFE23E01D0700FF5376 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -223,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C462B2023E0248E00FF5376 /* iWownManager.swift in Sources */,
+				0C462B3523E0A4B700FF5376 /* dummy2.cpp in Sources */,
 				0C462B1D23E0248600FF5376 /* BLEControllers.swift in Sources */,
 				0C462B2623E026DD00FF5376 /* Misc.swift in Sources */,
 				0C462B0723E01D0700FF5376 /* ScanViewController.swift in Sources */,
@@ -373,6 +388,7 @@
 			baseConfigurationReference = AFD67050FBAAC8F1E98DB04C /* Pods-iwown-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63UM45383T;
 				INFOPLIST_FILE = "iwown-test/Info.plist";
@@ -380,8 +396,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iwown-test/iWown",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.carechain.iwown-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iwown-test/iwown-test-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -392,6 +414,7 @@
 			baseConfigurationReference = 8B7EE1383488B05EE4A002E0 /* Pods-iwown-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 63UM45383T;
 				INFOPLIST_FILE = "iwown-test/Info.plist";
@@ -399,8 +422,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iwown-test/iWown",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.carechain.iwown-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iwown-test/iwown-test-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
