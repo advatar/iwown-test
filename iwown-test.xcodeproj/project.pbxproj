@@ -14,14 +14,11 @@
 		0C462B0A23E01D0700FF5376 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C462B0823E01D0700FF5376 /* Main.storyboard */; };
 		0C462B0C23E01D0A00FF5376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C462B0B23E01D0A00FF5376 /* Assets.xcassets */; };
 		0C462B0F23E01D0A00FF5376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C462B0D23E01D0A00FF5376 /* LaunchScreen.storyboard */; };
-		0C462B1823E01F4600FF5376 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C462B1623E01F4600FF5376 /* TableViewController.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0C462B1923E01F4600FF5376 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C462B1723E01F4600FF5376 /* TableViewController.xib */; };
 		0C462B1D23E0248600FF5376 /* BLEControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C462B1C23E0248600FF5376 /* BLEControllers.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0C462B2023E0248E00FF5376 /* iWownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C462B1F23E0248E00FF5376 /* iWownManager.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0C462B2223E0249000FF5376 /* iWownTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C462B2123E0249000FF5376 /* iWownTypes.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0C462B2623E026DD00FF5376 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C462B2523E026DD00FF5376 /* Misc.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0C462B2823E0421D00FF5376 /* dragonBoat.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C462B1E23E0248B00FF5376 /* dragonBoat.plist */; };
-		0C462B2A23E0450F00FF5376 /* ecg.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0C462B2923E0450F00FF5376 /* ecg.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,14 +30,11 @@
 		0C462B0B23E01D0A00FF5376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C462B0E23E01D0A00FF5376 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C462B1023E01D0A00FF5376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C462B1623E01F4600FF5376 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		0C462B1723E01F4600FF5376 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		0C462B1C23E0248600FF5376 /* BLEControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BLEControllers.swift; path = iWown/BLEControllers.swift; sourceTree = "<group>"; };
 		0C462B1E23E0248B00FF5376 /* dragonBoat.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = dragonBoat.plist; path = iWown/dragonBoat.plist; sourceTree = "<group>"; };
 		0C462B1F23E0248E00FF5376 /* iWownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iWownManager.swift; path = iWown/iWownManager.swift; sourceTree = "<group>"; };
 		0C462B2123E0249000FF5376 /* iWownTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = iWownTypes.swift; path = iWown/iWownTypes.swift; sourceTree = "<group>"; };
 		0C462B2523E026DD00FF5376 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
-		0C462B2923E0450F00FF5376 /* ecg.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ecg.txt; sourceTree = "<group>"; };
 		6CD493FCD107A368ED7C1187 /* Pods_iwown_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwown_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7EE1383488B05EE4A002E0 /* Pods-iwown-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwown-test.release.xcconfig"; path = "Target Support Files/Pods-iwown-test/Pods-iwown-test.release.xcconfig"; sourceTree = "<group>"; };
 		AFD67050FBAAC8F1E98DB04C /* Pods-iwown-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwown-test.debug.xcconfig"; path = "Target Support Files/Pods-iwown-test/Pods-iwown-test.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,9 +94,6 @@
 				0C462B2523E026DD00FF5376 /* Misc.swift */,
 				0C462B0623E01D0700FF5376 /* ScanViewController.swift */,
 				0C462B0423E01D0700FF5376 /* SceneDelegate.swift */,
-				0C462B1623E01F4600FF5376 /* TableViewController.swift */,
-				0C462B1723E01F4600FF5376 /* TableViewController.xib */,
-				0C462B2923E0450F00FF5376 /* ecg.txt */,
 			);
 			path = "iwown-test";
 			sourceTree = "<group>";
@@ -175,12 +166,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C462B2A23E0450F00FF5376 /* ecg.txt in Resources */,
 				0C462B2823E0421D00FF5376 /* dragonBoat.plist in Resources */,
 				0C462B0F23E01D0A00FF5376 /* LaunchScreen.storyboard in Resources */,
 				0C462B0C23E01D0A00FF5376 /* Assets.xcassets in Resources */,
 				0C462B0A23E01D0700FF5376 /* Main.storyboard in Resources */,
-				0C462B1923E01F4600FF5376 /* TableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +229,6 @@
 				0C462B0323E01D0700FF5376 /* AppDelegate.swift in Sources */,
 				0C462B2223E0249000FF5376 /* iWownTypes.swift in Sources */,
 				0C462B0523E01D0700FF5376 /* SceneDelegate.swift in Sources */,
-				0C462B1823E01F4600FF5376 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
