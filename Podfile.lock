@@ -1,0 +1,25 @@
+PODS:
+  - BLEDragonBoat (0.5.0)
+  - BLEProtoBuf (0.2.9):
+    - BLEDragonBoat
+    - Protobuf
+  - Protobuf (3.11.2)
+
+DEPENDENCIES:
+  - BLEDragonBoat
+  - BLEProtoBuf
+
+SPEC REPOS:
+  trunk:
+    - BLEDragonBoat
+    - BLEProtoBuf
+    - Protobuf
+
+SPEC CHECKSUMS:
+  BLEDragonBoat: 6af242d5331dc975d2879b4d3a274b6ac63f1e66
+  BLEProtoBuf: 1e10e9a522fb8b6756fb23dcf983fecb1d2a5b5a
+  Protobuf: dd1aaea7140debfe4dd0683fb8ef208e527ae153
+
+PODFILE CHECKSUM: f28796e2aa0062a1aba33e6dff7da618db36c511
+
+COCOAPODS: 1.9.0.beta.2

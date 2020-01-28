@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pXw-BX-Btg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanning-->
+        <scene sceneID="ohN-RX-b6d">
+            <objects>
+                <tableViewController title="Scanning" id="Lht-Jx-LWY" customClass="ScanViewController" customModule="iwown_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Scanning" largeTitleDisplayMode="always" id="Lie-Py-rhW"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CgL-Ml-n4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-711" y="18"/>
+        </scene>
+        <!--Device Scanner-->
+        <scene sceneID="iQW-nZ-8dv">
+            <objects>
+                <navigationController title="Device Scanner" id="pXw-BX-Btg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yAz-PO-jVN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Lht-Jx-LWY" kind="relationship" relationship="rootViewController" id="YWX-YF-x5Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AeN-nI-gpW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1627" y="18"/>
+        </scene>
+    </scenes>
+</document>
