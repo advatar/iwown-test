@@ -1,0 +1,52 @@
+### Introduce
+
+A new version of Iwown's Bluetooth SDK. Split the original [BLE3Framework] (https://github.com/xuezou/Lib3Framework-iOS), MidAutumn will no longer handle the content on the specific device protocol, only manage the Bluetooth status and search for connections through the CBCenterManager.
+
+### Major
+
+* Add a file named "midAutumn.plist". file content in follow. "bleClass" is a classification that corresponds to a separate Bluetooth protocol module. ‘class’ is the class name and ‘uuid’ is the unique service id. "searchServices" is used for filtering at the time of search.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>bleClass</key>
+        <array>
+            <dict>
+                <key>class</key>
+                <string>BLEIwown</string>
+                <key>uuid</key>
+                <string>FF20</string>
+            </dict>
+            <dict>
+                <key>class</key>
+                <string>BLEZg</string>
+                <key>uuid</key>
+                <string>6E400001-B5A3-F393-E0A9-E50E24DCCA9E</string>
+            </dict>
+            <dict>
+                <key>class</key>
+                <string>BLEProtocBuf</string>
+                <key>uuid</key>
+                <string>2E8C0001-2D91-5533-3117-59380A40AF8F</string>
+            </dict>
+            <dict/>
+        </array>
+        <key>searchServices</key>
+        <array>
+            <string>FF20</string>
+            <string>18A0</string>
+            <string>180D</string>
+            <string>181A</string>
+            <string>FEF5</string>
+            <string>6E400001-B5A3-F393-E0A9-E50E24DCCA9E</string>
+        </array>
+    </dict>
+</plist>
+
+```
+
+### Others
+
+‘BLEMidAutumn’ still provides some basic functions, which are included in Utils.

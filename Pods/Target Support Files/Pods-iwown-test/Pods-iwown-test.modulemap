@@ -1,0 +1,6 @@
+framework module Pods_iwown_test {
+  umbrella header "Pods-iwown-test-umbrella.h"
+
+  export *
+  module * { export * }
+}

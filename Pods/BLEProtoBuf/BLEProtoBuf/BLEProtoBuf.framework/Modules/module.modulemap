@@ -1,0 +1,6 @@
+framework module BLEProtoBuf {
+  umbrella header "BLEProtoBuf.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-iwown-test/Pods-iwown-test-frameworks.sh
+${PODS_ROOT}/BLEDragonBoat/BLEDragonBoat/BLEDragonBoat.framework
+${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework

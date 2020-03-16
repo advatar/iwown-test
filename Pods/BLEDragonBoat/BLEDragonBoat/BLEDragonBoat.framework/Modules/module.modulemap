@@ -1,0 +1,6 @@
+framework module BLEDragonBoat {
+  umbrella header "BLEDragonBoat.h"
+
+  export *
+  module * { export * }
+}
